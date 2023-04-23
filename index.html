@@ -1,17 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Code Quiz</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Code Quiz</title>
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   </head>
   <body>
-    <div class="card">
-      <h1>Code Quiz</h1>
+    <header>
+        <h1>Code Quiz</h1>
+    <div id ="highscores">
   </div>
+  <div id="timer"></div>
+</header>
+<main>
+    <div id="ready">
+    <h2>Test Your Knowledge</h2>
+    <button id="startQuiz" class="btn">Start Quiz</button>
+</div>
+<div id="quiz" class = "hidden">
+    <div id="questions">
+
+    </div>
+    <div id="message">
+
+    </div>
+</div>
+<div id ="result" class="hidden">
+    <div id="summary"></div>
+    <button id="viewscore" class-="btn">View High Scores</button>
+    <input type="text" id="initials" placeholder="Enter your initials" />
+    <button id ="saveScore" class="btn">Save Score</button>
+    <button id ="playAgain" class="btn">Play Again</button>
+</div>
+</main>
+<img class = "gaming" src="./assets/images/gaming.svg">
     <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>
