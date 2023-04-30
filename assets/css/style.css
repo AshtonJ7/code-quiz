@@ -1,15 +1,18 @@
-
-body {
-  margin: 3rem;
+*{
+  margin: 2rem;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-h1 {
-    text-align: center;
-    font-size: 32px;
-  }
-  .gaming {
-    position: absolute;
-    right: 200px;
-    z-index: -1;
-    opacity: 0.5;
-    transform: rotate(-30deg);
+
+:root {
+  --yellow: #F9F54B;
+  --lightBlue: #8BF5FA;
+  --dark: #205E61;
+  --medium: #3F979B;
+}
+.cover img {
+  position: absolute;
+  right: 10px;
+  z-index: -1;
+  opacity: 0.4;
 }

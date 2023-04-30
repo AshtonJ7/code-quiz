@@ -8,20 +8,40 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   </head>
+
   <body>
-    <header>
-        <h1>Code Quiz</h1>
-    <div id ="highscores">
+    <div class="cover">
+      <img src="./assets/images/question.svg" alt = "Question Mark">
   </div>
-  <div id="timer"></div>
-</header>
+    <header>
+      <h1>Javacript Quiz</h1>
+      <div id ="info">
+        <div class="info-title"><span><b>Test you knowledge Javascript knowledge with this quiz</b></span></div>
+        <ul>
+        <li>You will be given 75 seconds to answer each question</li>
+        <li>Once you select your answer, it can't be undone</li>
+        <li>You'll gain points for correct answers</li>
+        <li>You'll lose points for incorrect answers</li>
+        <li>GOOD LUCK</li>
+      </ul>
+      </div>
+  </header>
+
+
 <main>
-    <div id="ready">
-    <h2>Test Your Knowledge</h2>
+  
+    <div id="welcome">
+      
     <button id="startQuiz" class="btn">Start Quiz</button>
 </div>
-<div id="quiz" class = "hidden">
-    <div id="questions">
+
+<div id="quiz" class="hidden">
+  <h3>Time left:</h3>
+  <div id="timer"></div>
+    <div id="question">
+
+    </div>
+    <div id ="options">
 
     </div>
     <div id="message">
@@ -30,14 +50,16 @@
 </div>
 <div id ="result" class="hidden">
     <div id="summary"></div>
-    <button id="viewscore" class-="btn">View High Scores</button>
+    <h3>Feel free to submit your score</h3>
     <input type="text" id="initials" placeholder="Enter your initials" />
-    <button id ="saveScore" class="btn">Save Score</button>
-    <button id ="playAgain" class="btn">Play Again</button>
+    <button id ="saveScore" class="btn">Submit Score</button>
+    <button id ="playAgain" class ="btn">Play Again</button>
+    <button id="viewScore" class="btn">View High Scores</button>
 </div>
+
 </main>
-<img class = "gaming" src="./assets/images/gaming.svg">
-    <script src="./assets/js/questions.js"></script>
-    <script src="./assets/js/app.js"></script>
+
   </body>
+  <script src="./assets/js/questions.js"></script>
+<script src="./assets/js/app.js"></script>
 </html>
