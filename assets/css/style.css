@@ -3,7 +3,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-
+/* Colour scheme*/
 :root {
   --yellow: #F9F54B;
   --lightBlue: #8BF5FA;
@@ -11,7 +11,7 @@
   --medium: #3F979B;
 }
 
-
+/* Background Image */
 .cover img {
   position: absolute;
   right: 10px;
@@ -19,7 +19,7 @@
   opacity: 0.4;
 }
 
-
+/* Start quiz button */
 #startQuiz {
   margin: 0;
   position: relative;
@@ -33,7 +33,7 @@ welcome {
   margin-top: 5%;
 }
 
-
+/* h1 Javascript title */
 h1 {
   text-align: center;
   font-size: 50px;
@@ -42,7 +42,7 @@ h1 {
 span {
   margin:0px;
 }
-
+/* h1 Javascript title colour scheme */
 .S-color  {
   color: var(--yellow);
   font-weight:bold;
@@ -61,7 +61,7 @@ span {
   padding-bottom: 5px;
 }
 
-
+/* Quiz Box */
 #quiz {
   display: flex;
   flex: wrap;
@@ -86,7 +86,7 @@ span {
   font-weight: bold;
 }
 
-
+/* result section for scores.html and index.html*/
 #result, .results {
   display: flex;
   flex: wrap;
@@ -94,7 +94,7 @@ span {
   align-items: center;
 }
 
-
+/* Button element */
 .btn {
   background-color:	var(--medium);
   width: 150px;
@@ -113,7 +113,7 @@ h2 {
   margin-left:
 }
 
-
+/* Mobile screen CSS */
 
 @media only screen and (max-width: 1024px) {
   body {

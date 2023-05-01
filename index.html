@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,9 +10,11 @@
   </head>
 
   <body>
+    <!-- Background Image -->
     <div class="cover">
       <img src="./assets/images/question.svg" alt = "Question Mark">
   </div>
+<!-- Info Box -->
     <header>
       <h1><span class ="J-color">J</span>ava<span class ="S-color">S</span>cript Quiz</h1>
       <div id ="info">
@@ -29,14 +31,15 @@
 
 
 <main>
-  
-    <div id="welcome">
-      
+  <!-- Front Page before Quiz Starts -->
+    <div id="frontPage">
     <button id="startQuiz" class="btn">Start Quiz</button>
 </div>
 
+<!-- Quiz-->
 <div id="quiz" class="hidden">
   <h3>Time left:</h3>
+  <!-- Quiz questions, options and answers will be inserted from Javascript -->
   <div id="timer"></div>
     <div id="question">
 
@@ -48,6 +51,7 @@
 
     </div>
 </div>
+<!-- Results section, score will come from JAVASCRIPT-->
 <div id ="result" class="hidden">
     <div id="summary"></div>
     <h3>Feel free to submit your score</h3>
@@ -59,7 +63,9 @@
 
 </main>
 
-  </body>
-  <script src="./assets/js/questions.js"></script>
+<!-- JAVASCRIPT LINKS-->
+<script src="./assets/js/questions.js"></script>
 <script src="./assets/js/app.js"></script>
+  </body>
+  
 </html>

@@ -1,32 +1,36 @@
+//Buttons
 var startQuiz = document.getElementById("startQuiz");
 var saveScore = document.getElementById("saveScore")
 var viewScore = document.getElementById("viewScore");
 var playAgain = document.getElementById("playAgain");
 
 
-
-var welcome = document.getElementById("welcome");
+//HTML Div elements
+var frontPage = document.getElementById("frontPage");
 var quiz = document.getElementById("quiz");
 var result = document.getElementById("result")
 var info = document.getElementById("info")
-var highscore = [];
 
+//Quiz options and display message
 var options = document.getElementById("options")
 var message = document.getElementById("message")
 
+//Timer and score
 var timer = document.getElementById("timer")
 var countdown = document.getElementById("timer")
 var summary = document.getElementById("summary")
+var highscore = [];
 
 var secondsLeft = 0;
 var score = 0;
 var currentQuestion = 0;
 var currentTimer;
 
-
+//hide results and quiz section on first page of quiz
 result.style.display = 'none'
 quiz.style.display= 'none'
 
+// if start Quiz button clicked action the following:
 
 function onstartGame() {
 
@@ -35,10 +39,11 @@ function onstartGame() {
     currentQuestion = 0;
 
     score = 0;
-
+// start timer
     countdownTimer = setInterval(function () {
 
         if (secondsLeft > 0) {
+            // display timer
             timer.textContent = secondsLeft;
         } else {
 
@@ -47,15 +52,18 @@ function onstartGame() {
         secondsLeft--;
 
     }, 1000);
-
-    welcome.style.display = 'none';
+//hide the followig when quiz is open:
+    frontPage.style.display = 'none';
     result.style.display = 'none';
     info.style.display = 'none';
+
+//Style quiz display
     quiz.style.display = 'flex';
 
     displayQuestion();
 }
 
+// function for displaying current question
 function displayQuestion() {
 
     currentQuestion++;
@@ -71,9 +79,12 @@ function displayQuestion() {
 var question = questions[currentQuestion];
 document.getElementById("question").textContent = question.title
 
+// Display choice options
 options.innerHTML = "";
 options.style.cursor = "pointer";
 
+
+// loop for choice options
 for (var i = 0; i < question.choices.length; i++) {
 
     var option = document.createElement("div");
@@ -86,6 +97,8 @@ for (var i = 0; i < question.choices.length; i++) {
 
 }
 
+// Function to check if chosen answer is correct
+// & adds to user's score if it is
 function onSelectAnswer(e) {
     var correctAnswer = questions[currentQuestion].answer;
 
@@ -113,21 +126,24 @@ function displayMessage(msg) {
     }, 1000);
 }
 
+//Function for when game is over
 function stopGame() {
     quiz.style.display= 'none' //hide quiz box
     
-
+//Clears Timer
     clearInterval(countdownTimer);
 
     timer.textContent = ""
 
-    quiz.style.display -"none";
+
+    //display results page
     result.style.display = 'flex'
 
     summary.textContent = "Your Score is: " + score;
 
 }
 
+//Save score to local storage
 function onSaveScore(e) {
     var initials = document.getElementById("initials").value
     var highscore = JSON.parse(localStorage.getItem("highscore")) || [];
@@ -144,11 +160,11 @@ function onSaveScore(e) {
     }
 }
 
-
+//Open scores page
 function onViewScore(e) {
     window.location.href = 'scores.html'}
 
-
+//Open Index html
 function onplayAgain() {
     window.location.href = 'index.html'}
 
