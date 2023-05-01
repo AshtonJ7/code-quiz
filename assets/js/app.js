@@ -128,4 +128,32 @@ function stopGame() {
 
 }
 
+function onSaveScore(e) {
+    var initials = document.getElementById("initials").value
+    var highscore = JSON.parse(localStorage.getItem("highscore")) || [];
+    if (initials === "") {
+        initials = alert("Please input valid initials");
+    } else {
+        initials.value = " ";
+        var userScore = initials.concat(": ", score);
+        highscore.push(userScore);
+        localStorage.setItem("highscore", JSON.stringify(highscore));
+        var rankings = document.createElement("div");
+        rankings.textContent = userScore;
+        result.appendChild(rankings);
+    }
+}
+
+
+function onViewScore(e) {
+    window.location.href = 'scores.html'}
+
+
+function onplayAgain() {
+    window.location.href = 'index.html'}
+
+
 startQuiz.addEventListener("click", onstartGame);
+saveScore.addEventListener("click", onSaveScore);
+viewScore.addEventListener("click", onViewScore);
+playAgain.addEventListener("click", onplayAgain);
